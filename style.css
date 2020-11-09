@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    background-color:white;
+    background-size: cover;
+    height: 100vh;
+}
+.navbar{
+    height: 150px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+
+}
+.logo{
+    width: 130px;
+    height: 120px;
+    padding: 10px 15px;
+}
+.navbar ul{
+    float: right;
+    margin-right: 20px;
+    padding-top: 20px;
+
+}
+.navbar ul li{
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+    line-height: 80px;
+
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 6px 13px;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+    background: darkgreen;
+    border-radius: 2px;
+}
+.wrapper .center{
+    position: absolute;
+    top: 40%;
+    left: 55%;
+    transform: translate(-50%);
+    font-family: sans-serif;
+    user-select: none;
+}
+.center h1{
+    color: lightgreen;
+    font-size: 70px;
+    font-weight: bold;
+    width: 885px;
+    text-align: center;
+}
+.center h2{
+	color: lightgreen;
+	font-size: 70px;
+	font-weight: bold;
+	margin-top: 10px;
+	width: 885px;
+    text-align: center;
+    font-family: cursive;
+}
+.center .buttons{
+	margin: 35px 280px;
+}
+.buttons button{
+	height: 50px;
+	width: 150px;
+	font-size: 18px;
+	font-weight: 600;
+	color: white;
+	background:darkgreen;
+	outline: none;
+	cursor: pointer;
+	border: 1px solid darkgreen;
+	border-radius: 25px;
+	transition: .4s;
+}
+.buttons .btn2{
+	margin-left: 15px;
+}
+.buttons button:hover{
+	background: lightgreen;
+}
+.Careousl{
+    background: white;
+}

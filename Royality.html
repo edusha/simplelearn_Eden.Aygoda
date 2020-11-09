@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  h2 {text-align: center;}
+
+   *{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    background-color:white;
+    background-size: cover;
+    height: 100vh;
+}
+.navbar{
+    height: 150px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+
+}
+.logo{
+    width: 130px;
+    height: 120px;
+    padding: 10px 15px;
+}
+.navbar ul{
+    float: right;
+    margin-right: 20px;
+    padding-top: 20px;
+
+}
+.navbar ul li{
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+    line-height: 80px;
+
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 6px 13px;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+    background: darkgreen;
+    border-radius: 2px;
+}
+.wrapper .center{
+    position: absolute;
+    top: 40%;
+    left: 55%;
+    transform: translate(-50%);
+    font-family: sans-serif;
+    user-select: none;
+}
+.center h1{
+    color: lightgreen;
+    font-size: 70px;
+    font-weight: bold;
+    width: 885px;
+    text-align: center;
+}
+.center h2{
+	color: lightgreen;
+	font-size: 70px;
+	font-weight: bold;
+	margin-top: 10px;
+	width: 885px;
+    text-align: center;
+    font-family: cursive;
+}
+.center .buttons{
+	margin: 35px 280px;
+}
+.buttons button{
+	height: 50px;
+	width: 150px;
+	font-size: 18px;
+	font-weight: 600;
+	color: white;
+	background:darkgreen;
+	outline: none;
+	cursor: pointer;
+	border: 1px solid darkgreen;
+	border-radius: 25px;
+	transition: .4s;
+}
+.buttons .btn2{
+	margin-left: 15px;
+}
+.buttons button:hover{
+	background: lightgreen;
+}
+.Careousl{
+    background: white;
+}
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 70%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  margin-left: 14%;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 70%;
+  border: 6px solid #ddd;
+  font-size: 18px;
+  margin-left: 14%;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+
+<title> Royality </title>
+</head>
+<body>
+
+    <div class="wrapper">
+        <nav class="navbar">
+            <img class="logo" src="/img/LogoMakr-4q0BLL.png">
+
+            <ul>
+                <li><a  href="index.html">Home</a></li>
+                <li><a   href="about.html">About Us</a></li>
+                <li><a  href="member.html">Member</a></li>
+                <li><a class="active" href="Royality.html">Royality</a></li>
+            </ul>
+
+
+        </nav>
+
+    </br> 
+
+    <h2 style=color:red> Royality means a lot for us. </h2> 
+</br>
+<h2>
+    Here is a list of our top memebers. Find yours!
+</h2>
+
+</br>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Name</th>
+    <th style="width:40%;">Location</th>
+  </tr>
+  <tr>
+    <td>Beza Bezaneh</td>
+    <td>Ethiopia</td>
+  </tr>
+  <tr>
+    <td>Deva Dave</td>
+    <td>Ethiopia</td>
+  </tr>
+  <tr>
+    <td>Lydia G/Hiwot</td>
+    <td>Seattle</td>
+  </tr>
+  <tr>
+    <td> Kaleb Kaka </td>
+    <td>Seattle</td>
+  </tr>
+  <tr>
+    <td> Fikir Yezognal</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td> Deros ke Hind</td>
+    <td>Italy</td>
+  </tr>
+  <tr>
+    <td>Fikir Yelekal</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Hiedi Tsion </td>
+    <td>France</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>
